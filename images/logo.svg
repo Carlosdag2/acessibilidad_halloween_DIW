@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Calabaza de Halloween -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Cuerpo de la calabaza -->
+  <ellipse cx="100" cy="110" rx="70" ry="65" fill="#ff6b1a" stroke="#d95a0f" stroke-width="3"/>
+  <ellipse cx="100" cy="110" rx="60" ry="55" fill="#ff8c42" opacity="0.3"/>
+  
+  <!-- Líneas verticales de la calabaza -->
+  <path d="M 100 45 Q 95 110 100 175" stroke="#d95a0f" stroke-width="2" fill="none"/>
+  <path d="M 100 45 Q 120 110 100 175" stroke="#d95a0f" stroke-width="2" fill="none"/>
+  <path d="M 100 45 Q 80 110 100 175" stroke="#d95a0f" stroke-width="2" fill="none"/>
+  <path d="M 100 45 Q 135 110 100 175" stroke="#d95a0f" stroke-width="2" fill="none"/>
+  <path d="M 100 45 Q 65 110 100 175" stroke="#d95a0f" stroke-width="2" fill="none"/>
+  
+  <!-- Tallo -->
+  <rect x="95" y="30" width="10" height="20" rx="2" fill="#8b4513" stroke="#654321" stroke-width="2"/>
+  <ellipse cx="100" cy="30" rx="8" ry="5" fill="#9d5a24"/>
+  
+  <!-- Hoja -->
+  <path d="M 110 35 Q 125 30 120 40 Q 118 38 110 38 Z" fill="#4a7c2a" stroke="#3d6622" stroke-width="1"/>
+  
+  <!-- Ojo izquierdo -->
+  <path d="M 65 90 L 75 85 L 85 90 L 75 100 Z" fill="#1a1a1a" filter="url(#glow)"/>
+  <circle cx="75" cy="92" r="3" fill="#ffa500" opacity="0.8"/>
+  
+  <!-- Ojo derecho -->
+  <path d="M 115 90 L 125 85 L 135 90 L 125 100 Z" fill="#1a1a1a" filter="url(#glow)"/>
+  <circle cx="125" cy="92" r="3" fill="#ffa500" opacity="0.8"/>
+  
+  <!-- Nariz triangular -->
+  <path d="M 100 110 L 92 125 L 108 125 Z" fill="#1a1a1a" filter="url(#glow)"/>
+  <circle cx="100" cy="118" r="2" fill="#ffa500" opacity="0.8"/>
+  
+  <!-- Boca sonriente -->
+  <path d="M 60 135 Q 65 130 70 135 Q 75 140 80 135 Q 85 130 90 135 Q 95 140 100 135 Q 105 130 110 135 Q 115 140 120 135 Q 125 130 130 135 Q 135 140 140 135" 
+        stroke="#1a1a1a" stroke-width="4" fill="none" stroke-linecap="round" filter="url(#glow)"/>
+  
+  <!-- Dientes -->
+  <rect x="72" y="135" width="6" height="8" fill="#1a1a1a"/>
+  <rect x="92" y="135" width="6" height="8" fill="#1a1a1a"/>
+  <rect x="112" y="135" width="6" height="8" fill="#1a1a1a"/>
+  <rect x="132" y="135" width="6" height="8" fill="#1a1a1a"/>
+  
+  <!-- Brillo en la calabaza -->
+  <ellipse cx="65" cy="80" rx="15" ry="20" fill="#ffffff" opacity="0.3"/>
+  <ellipse cx="75" cy="75" rx="8" ry="12" fill="#ffffff" opacity="0.4"/>
+</svg>

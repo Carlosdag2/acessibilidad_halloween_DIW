@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal de películas de terror y Halloween - Web accesible para todos los usuarios">
+    <title>Terror Cine - Películas de Halloween Accesibles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'halloween-orange': '#ff6b1a',
+                        'halloween-dark': '#1a1a1a',
+                        'halloween-brown': '#8b4513',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-halloween-dark text-white font-body">
+
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-halloween-orange text-black px-4 py-2 font-bold z-50 rounded-br-lg focus:outline-none focus:ring-4 focus:ring-halloween-orange">
+        Saltar al contenido principal
+    </a>
+
+    <header role="banner" class="bg-gradient-to-r from-gray-900 to-halloween-dark border-b-4 border-halloween-orange shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center gap-4">
+                <img src="images/logo.svg" alt="Terror Cine - Logo con calabaza" class="w-12 h-12 md:w-16 md:h-16">
+                <h1 class="text-3xl md:text-5xl font-display text-halloween-orange">Terror Cine</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav role="navigation" aria-label="Navegación principal" class="bg-gray-900 sticky top-0 z-40 shadow-md">
+        <div class="container mx-auto px-4">
+            <ul class="flex flex-col md:flex-row gap-2 py-3">
+                <li class="flex-1">
+                    <a href="index.html" class="flex items-center justify-center gap-2 px-4 py-3 bg-halloween-orange text-black rounded-lg font-semibold transition-all hover:scale-105 focus:outline-none focus:ring-4 focus:ring-halloween-orange" aria-current="page">
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li class="flex-1">
+                    <a href="peliculas.html" class="flex items-center justify-center gap-2 px-4 py-3 bg-transparent text-white rounded-lg font-semibold border-2 border-transparent transition-all hover:bg-halloween-orange hover:text-black focus:outline-none focus:ring-4 focus:ring-halloween-orange">
+                        <span>Películas</span>
+                    </a>
+                </li>
+                <li class="flex-1">
+                    <a href="contacto.html" class="flex items-center justify-center gap-2 px-4 py-3 bg-transparent text-white rounded-lg font-semibold border-2 border-transparent transition-all hover:bg-halloween-orange hover:text-black focus:outline-none focus:ring-4 focus:ring-halloween-orange">
+                        <span>Contacto</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main" class="container mx-auto px-4 py-8 md:py-12">
+        <section class="text-center bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 md:p-12 mb-12 border-2 border-halloween-orange" aria-labelledby="hero-title">
+            <h2 id="hero-title" class="text-4xl md:text-6xl font-display text-halloween-orange mb-6">
+                Bienvenido a Terror Cine
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Descubre las mejores películas de terror y Halloween. 
+                Nuestra web está diseñada para ser accesible a todos los usuarios, 
+                independientemente de sus capacidades.
+            </p>
+            <a href="peliculas.html" class="inline-block bg-halloween-orange text-black px-8 py-4 rounded-lg font-bold text-lg transition-all hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-halloween-orange">
+                Ver Películas
+                <span class="sr-only">(Ir a la página de películas)</span>
+            </a>
+        </section>
+
+        <section class="mb-12" aria-labelledby="features-title">
+            <h2 id="features-title" class="text-3xl md:text-4xl font-bold text-halloween-orange mb-8 border-b-2 border-halloween-orange pb-3">
+                Características de Accesibilidad
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <article class="bg-gray-800 p-6 rounded-xl border-2 border-halloween-brown transition-all hover:-translate-y-2 hover:border-halloween-orange hover:shadow-xl">
+                    <div class="text-5xl mb-4" aria-hidden="true"></div>
+                    <h3 class="text-xl font-bold text-halloween-orange mb-3">Accesibilidad Visual</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Alto contraste de colores</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Textos alternativos en imágenes</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Tamaño de fuente ajustable</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Compatible con lectores de pantalla</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="bg-gray-800 p-6 rounded-xl border-2 border-halloween-brown transition-all hover:-translate-y-2 hover:border-halloween-orange hover:shadow-xl">
+                    <div class="text-5xl mb-4" aria-hidden="true"></div>
+                    <h3 class="text-xl font-bold text-halloween-orange mb-3">Navegación por Teclado</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Accesible con Tab</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Foco visible en elementos</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Orden lógico de navegación</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Atajos de teclado</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="bg-gray-800 p-6 rounded-xl border-2 border-halloween-brown transition-all hover:-translate-y-2 hover:border-halloween-orange hover:shadow-xl">
+                    <div class="text-5xl mb-4" aria-hidden="true"></div>
+                    <h3 class="text-xl font-bold text-halloween-orange mb-3">Contenido Multimedia</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Subtítulos en videos</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Transcripciones disponibles</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Descripciones de audio</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Controles accesibles</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="bg-gray-800 p-6 rounded-xl border-2 border-halloween-brown transition-all hover:-translate-y-2 hover:border-halloween-orange hover:shadow-xl">
+                    <div class="text-5xl mb-4" aria-hidden="true"></div>
+                    <h3 class="text-xl font-bold text-halloween-orange mb-3">Fácil Comprensión</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Lenguaje claro y sencillo</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Estructura lógica</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Iconos descriptivos</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-halloween-orange font-bold">✓</span>
+                            <span>Navegación intuitiva</span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="destacadas-title">
+            <h2 id="destacadas-title" class="text-3xl md:text-4xl font-bold text-halloween-orange mb-8 border-b-2 border-halloween-orange pb-3">
+                Películas Destacadas de Halloween
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <article class="bg-gray-800 rounded-xl overflow-hidden border-2 border-gray-700 transition-all hover:-translate-y-2 hover:border-halloween-orange hover:shadow-2xl">
+                    <img src="https://media.posterlounge.com/img/products/740000/734836/734836_poster.jpg" alt="Póster de Halloween - Michael Myers con máscara blanca" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-halloween-orange mb-2">Halloween (1978)</h3>
+                        <p class="text-gray-300 mb-4">El clásico de John Carpenter que definió el género slasher.</p>
+                        <a href="detalle.html" class="block w-full text-center bg-gray-700 text-white border-2 border-halloween-orange px-4 py-2 rounded-lg font-semibold transition-all hover:bg-halloween-orange hover:text-black focus:outline-none focus:ring-4 focus:ring-halloween-orange">
+                            Ver Detalles
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-gray-800 rounded-xl overflow-hidden border-2 border-gray-700 transition-all hover:-translate-y-2 hover:border-halloween-orange hover:shadow-2xl">
+                    <img src="https://i.pinimg.com/736x/23/2e/19/232e1958f9b0ed283b0d22e62ab1a274.jpg" alt="Póster de Pesadilla en Elm Street - Freddy Krueger" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-halloween-orange mb-2">Pesadilla en Elm Street</h3>
+                        <p class="text-gray-300 mb-4">El terrorífico Freddy Krueger acecha en tus sueños.</p>
+                        <a href="detalle.html" class="block w-full text-center bg-gray-700 text-white border-2 border-halloween-orange px-4 py-2 rounded-lg font-semibold transition-all hover:bg-halloween-orange hover:text-black focus:outline-none focus:ring-4 focus:ring-halloween-orange">
+                            Ver Detalles
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-gray-800 rounded-xl overflow-hidden border-2 border-gray-700 transition-all hover:-translate-y-2 hover:border-halloween-orange hover:shadow-2xl">
+                    <img src="https://pics.filmaffinity.com/hocus_pocus_2-412182137-large.jpg" alt="Póster de El Retorno de las Brujas - Tres brujas en la noche" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-halloween-orange mb-2">El Retorno de las Brujas</h3>
+                        <p class="text-gray-300 mb-4">Comedia familiar perfecta para Halloween.</p>
+                        <a href="detalle.html" class="block w-full text-center bg-gray-700 text-white border-2 border-halloween-orange px-4 py-2 rounded-lg font-semibold transition-all hover:bg-halloween-orange hover:text-black focus:outline-none focus:ring-4 focus:ring-halloween-orange">
+                            Ver Detalles
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <aside class="fixed right-4 top-1/2 -translate-y-1/2 bg-gray-800 p-4 rounded-xl border-2 border-halloween-orange shadow-2xl z-30 hidden lg:block" aria-labelledby="tools-title">
+            <h2 id="tools-title" class="text-sm font-bold mb-3 text-white">Accesibilidad</h2>
+            <div class="flex flex-col gap-2">
+                <button id="increase-font" class="bg-gray-900 text-white border-2 border-halloween-orange rounded-lg p-3 min-w-[44px] min-h-[44px] text-xl font-bold transition-all hover:bg-halloween-orange hover:scale-110 focus:outline-none focus:ring-4 focus:ring-halloween-orange" aria-label="Aumentar tamaño de fuente">
+                    <span aria-hidden="true">A+</span>
+                </button>
+                <button id="decrease-font" class="bg-gray-900 text-white border-2 border-halloween-orange rounded-lg p-3 min-w-[44px] min-h-[44px] text-xl font-bold transition-all hover:bg-halloween-orange hover:scale-110 focus:outline-none focus:ring-4 focus:ring-halloween-orange" aria-label="Disminuir tamaño de fuente">
+                    <span aria-hidden="true">A-</span>
+                </button>
+                <button id="high-contrast" class="bg-gray-900 text-white border-2 border-halloween-orange rounded-lg p-3 min-w-[44px] min-h-[44px] text-xl font-bold transition-all hover:bg-halloween-orange hover:scale-110 focus:outline-none focus:ring-4 focus:ring-halloween-orange" aria-label="Activar alto contraste">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button id="reset-settings" class="bg-gray-900 text-white border-2 border-halloween-orange rounded-lg p-3 min-w-[44px] min-h-[44px] text-xl font-bold transition-all hover:bg-halloween-orange hover:scale-110 focus:outline-none focus:ring-4 focus:ring-halloween-orange" aria-label="Restablecer configuración">
+                    <span aria-hidden="true">↻</span>
+                </button>
+            </div>
+        </aside>
+    </main>
+
+    <footer role="contentinfo" class="bg-gray-900 text-gray-300 py-8 mt-12 border-t-4 border-halloween-orange">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">&copy; 2025 Terror Cine</p>
+            <nav aria-label="Navegación del pie de página">
+                <ul class="flex justify-center gap-6 flex-wrap">
+                    <li>
+                        <a href="#main-content" class="text-halloween-orange hover:underline focus:outline-none focus:ring-2 focus:ring-halloween-orange rounded">
+                            Volver arriba
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contacto.html" class="text-halloween-orange hover:underline focus:outline-none focus:ring-2 focus:ring-halloween-orange rounded">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/accessibility.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con Terror Cine - Formulario accesible">
+    <title>Contacto - Terror Cine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'halloween-orange': '#ff6b1a',
+                        'halloween-dark': '#1a1a1a',
+                        'halloween-brown': '#8b4513',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-halloween-dark text-white font-body">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-halloween-orange text-black px-4 py-2 font-bold z-50 rounded-br-lg focus:outline-none focus:ring-4 focus:ring-halloween-orange">
+        Saltar al contenido principal
+    </a>
+
+    <header role="banner" class="bg-gradient-to-r from-gray-900 to-halloween-dark border-b-4 border-halloween-orange shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center gap-4">
+                <img src="images/logo.svg" alt="Terror Cine - Logo con calabaza" class="w-12 h-12 md:w-16 md:h-16">
+                <h1 class="text-3xl md:text-5xl font-display text-halloween-orange">Terror Cine</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav role="navigation" aria-label="Navegación principal" class="bg-gray-900 sticky top-0 z-40 shadow-md">
+        <div class="container mx-auto px-4">
+            <ul class="flex flex-col md:flex-row gap-2 py-3">
+                <li class="flex-1">
+                    <a href="index.html" class="flex items-center justify-center gap-2 px-4 py-3 bg-transparent text-white rounded-lg font-semibold border-2 border-transparent transition-all hover:bg-halloween-orange hover:text-black focus:outline-none focus:ring-4 focus:ring-halloween-orange">
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li class="flex-1">
+                    <a href="peliculas.html" class="flex items-center justify-center gap-2 px-4 py-3 bg-transparent text-white rounded-lg font-semibold border-2 border-transparent transition-all hover:bg-halloween-orange hover:text-black focus:outline-none focus:ring-4 focus:ring-halloween-orange">
+                        <span>Películas</span>
+                    </a>
+                </li>
+                <li class="flex-1">
+                    <a href="contacto.html" class="flex items-center justify-center gap-2 px-4 py-3 bg-halloween-orange text-black rounded-lg font-semibold transition-all hover:scale-105 focus:outline-none focus:ring-4 focus:ring-halloween-orange" aria-current="page">
+                        <span>Contacto</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main" class="container mx-auto px-4 py-8 md:py-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-halloween-orange mb-4">Contacta con Nosotros</h2>
+        <p class="text-gray-300 text-lg mb-8 max-w-3xl">
+            ¿Tienes alguna pregunta, sugerencia o comentario sobre accesibilidad? 
+            Nos encantaría saber de ti. Completa el formulario y te responderemos pronto.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <section class="lg:col-span-2 bg-gray-800 rounded-2xl p-6 md:p-8 border-2 border-halloween-brown" aria-labelledby="form-title">
+                <h3 id="form-title" class="text-2xl font-bold text-halloween-orange mb-6">Formulario de Contacto</h3>
+                
+                <form id="contact-form" class="space-y-6" novalidate>
+                    <div>
+                        <label for="name" class="block text-white font-bold mb-2">
+                            Nombre completo <span class="text-red-500" aria-label="campo obligatorio">*</span>
+                        </label>
+                        <input type="text" 
+                               id="name" 
+                               name="name" 
+                               required
+                               aria-required="true"
+                               aria-describedby="name-error"
+                               class="w-full px-4 py-3 bg-gray-900 text-white border-2 border-halloween-brown rounded-lg focus:border-halloween-orange focus:outline-none focus:ring-4 focus:ring-halloween-orange/50 transition-colors"
+                               placeholder="Tu nombre">
+                        <span id="name-error" class="text-red-400 text-sm mt-1 hidden" role="alert"></span>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-white font-bold mb-2">
+                            Correo electrónico <span class="text-red-500" aria-label="campo obligatorio">*</span>
+                        </label>
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               required
+                               aria-required="true"
+                               aria-describedby="email-error"
+                               class="w-full px-4 py-3 bg-gray-900 text-white border-2 border-halloween-brown rounded-lg focus:border-halloween-orange focus:outline-none focus:ring-4 focus:ring-halloween-orange/50 transition-colors"
+                               placeholder="tu@email.com">
+                        <span id="email-error" class="text-red-400 text-sm mt-1 hidden" role="alert"></span>
+                    </div>
+
+                    <div>
+                        <label for="subject" class="block text-white font-bold mb-2">
+                            Asunto <span class="text-red-500" aria-label="campo obligatorio">*</span>
+                        </label>
+                        <select id="subject" 
+                                name="subject" 
+                                required
+                                aria-required="true"
+                                aria-describedby="subject-error"
+                                class="w-full px-4 py-3 bg-gray-900 text-white border-2 border-halloween-brown rounded-lg focus:border-halloween-orange focus:outline-none focus:ring-4 focus:ring-halloween-orange/50 transition-colors">
+                            <option value="">Selecciona un asunto</option>
+                            <option value="consulta-general">Consulta general</option>
+                            <option value="accesibilidad">Problema de accesibilidad</option>
+                            <option value="sugerencia-pelicula">Sugerencia de película</option>
+                            <option value="error-tecnico">Error técnico</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <span id="subject-error" class="text-red-400 text-sm mt-1 hidden" role="alert"></span>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-white font-bold mb-2">
+                            Mensaje <span class="text-red-500" aria-label="campo obligatorio">*</span>
+                        </label>
+                        <textarea id="message" 
+                                  name="message" 
+                                  rows="5"
+                                  required
+                                  aria-required="true"
+                                  aria-describedby="message-error message-count"
+                                  class="w-full px-4 py-3 bg-gray-900 text-white border-2 border-halloween-brown rounded-lg focus:border-halloween-orange focus:outline-none focus:ring-4 focus:ring-halloween-orange/50 transition-colors resize-vertical"
+                                  placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+
+                    <p class="text-gray-400 text-sm">
+                        <span class="text-red-500">*</span> Campos obligatorios
+                    </p>
+
+                    <div class="flex gap-4 flex-wrap">
+                        <button type="submit" 
+                                class="flex-1 min-w-[200px] bg-halloween-orange text-black px-6 py-3 rounded-lg font-bold transition-all hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-halloween-orange">
+                            Enviar Mensaje
+                        </button>
+                        <button type="reset" 
+                                class="flex-1 min-w-[200px] bg-gray-700 text-white border-2 border-halloween-orange px-6 py-3 rounded-lg font-bold transition-all hover:bg-halloween-orange hover:text-black focus:outline-none focus:ring-4 focus:ring-halloween-orange">
+                            Limpiar Formulario
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <aside class="space-y-6" aria-labelledby="info-title">
+                <h3 id="info-title" class="text-2xl font-bold text-halloween-orange mb-4">Información de Contacto</h3>
+                
+                <div class="bg-gray-800 p-6 rounded-xl border-2 border-halloween-brown">
+                    <h4 class="flex items-center gap-2 text-lg font-bold text-halloween-orange mb-3">
+                        Dirección
+                    </h4>
+                    <address class="text-gray-300 not-italic">
+                        Calle del Terror, 13<br>
+                        28013 Madrid, España
+                    </address>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-xl border-2 border-halloween-brown">
+                    <h4 class="flex items-center gap-2 text-lg font-bold text-halloween-orange mb-3">
+                        Email
+                    </h4>
+                    <p>
+                        <a href="mailto:contacto@terrorcine.es" class="text-gray-300 hover:text-halloween-orange transition-colors focus:outline-none focus:ring-2 focus:ring-halloween-orange rounded">
+                            contacto@terrorcine.es
+                        </a>
+                    </p>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-xl border-2 border-halloween-brown">
+                    <h4 class="flex items-center gap-2 text-lg font-bold text-halloween-orange mb-3">
+                        Teléfono
+                    </h4>
+                    <p>
+                        <a href="tel:+34666131313" class="text-gray-300 hover:text-halloween-orange transition-colors focus:outline-none focus:ring-2 focus:ring-halloween-orange rounded">
+                            +34 666 13 13 13
+                        </a>
+                    </p>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-xl border-2 border-halloween-brown">
+                    <h4 class="flex items-center gap-2 text-lg font-bold text-halloween-orange mb-3">
+                        Horario
+                    </h4>
+                    <p class="text-gray-300">
+                        Lunes a Viernes: 9:00 - 18:00<br>
+                        Sábados: 10:00 - 14:00<br>
+                        Domingos: Cerrado
+                    </p>
+                </div>
+            </aside>
+        </div>
+        <aside class="fixed right-4 top-1/2 -translate-y-1/2 bg-gray-800 p-4 rounded-xl border-2 border-halloween-orange shadow-2xl z-30 hidden lg:block" aria-labelledby="tools-title">
+            <h2 id="tools-title" class="text-sm font-bold mb-3 text-white">Accesibilidad</h2>
+            <div class="flex flex-col gap-2">
+                <button id="increase-font" class="bg-gray-900 text-white border-2 border-halloween-orange rounded-lg p-3 min-w-[44px] min-h-[44px] text-xl font-bold transition-all hover:bg-halloween-orange hover:scale-110 focus:outline-none focus:ring-4 focus:ring-halloween-orange" aria-label="Aumentar tamaño de fuente">
+                    <span aria-hidden="true">A+</span>
+                </button>
+                <button id="decrease-font" class="bg-gray-900 text-white border-2 border-halloween-orange rounded-lg p-3 min-w-[44px] min-h-[44px] text-xl font-bold transition-all hover:bg-halloween-orange hover:scale-110 focus:outline-none focus:ring-4 focus:ring-halloween-orange" aria-label="Disminuir tamaño de fuente">
+                    <span aria-hidden="true">A-</span>
+                </button>
+                <button id="high-contrast" class="bg-gray-900 text-white border-2 border-halloween-orange rounded-lg p-3 min-w-[44px] min-h-[44px] text-xl font-bold transition-all hover:bg-halloween-orange hover:scale-110 focus:outline-none focus:ring-4 focus:ring-halloween-orange" aria-label="Activar alto contraste">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button id="reset-settings" class="bg-gray-900 text-white border-2 border-halloween-orange rounded-lg p-3 min-w-[44px] min-h-[44px] text-xl font-bold transition-all hover:bg-halloween-orange hover:scale-110 focus:outline-none focus:ring-4 focus:ring-halloween-orange" aria-label="Restablecer configuración">
+                    <span aria-hidden="true">↻</span>
+                </button>
+            </div>
+        </aside>
+    </main>
+
+    <footer role="contentinfo" class="bg-gray-900 text-gray-300 py-8 mt-12 border-t-4 border-halloween-orange">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">&copy; 2025 Terror Cine</p>
+            <nav aria-label="Navegación del pie de página">
+                <ul class="flex justify-center gap-6 flex-wrap">
+                    <li>
+                        <a href="#main-content" class="text-halloween-orange hover:underline focus:outline-none focus:ring-2 focus:ring-halloween-orange rounded">
+                            Volver arriba
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-halloween-orange hover:underline focus:outline-none focus:ring-2 focus:ring-halloween-orange rounded">
+                            Inicio
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/accessibility.js"></script>
+</body>
+</html>
